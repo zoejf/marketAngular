@@ -1,5 +1,20 @@
+/*body {
+  background-image: url(http://i.imgur.com/gzgkuun.jpg) no-repeat center center fixed;
+  background-size: cover; 
+  /*background-repeat: no-repeat;
+}*/
+
 body {
-  background-image: url(http://i.imgur.com/gzgkuun.jpg);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
+
+.full {
+  background: url(http://i.imgur.com/gzgkuun.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
