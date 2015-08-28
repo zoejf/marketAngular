@@ -1,0 +1,19 @@
+body {
+  background-image: url(http://i.imgur.com/gzgkuun.jpg);
+  background-size: cover;
+}
+
+.heading {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 400%;
+}
+
+#welcome-div {
+  text-align: center;
+}
+
+.panel {
+  margin-top: 40px;
+  background-color: rgba(176,176,176,0.5);
+  border-color: transparent;
+}

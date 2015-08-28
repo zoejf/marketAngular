@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="eng" ng-app="marketFinder">
 <head>
   <title>To Market</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- JQuery 2.x CDN -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- JQuery 2.x CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--     font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- angular -->
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <!--   google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
   <!-- custom scripts -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="app.js"></script>
 </head>
-<body>
-
+<body ng-controller="MainCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3" id="welcome-div">
+        <div class="panel panel-default">
+          <div class="panel-body">
+           <h1 class="heading">To Market</h1>
+           <br>
+           <form class="form-inline" ng-submit="searchZip()">
+             <div class="form-group">
+               <input type="text" ng-model="zip" class="form-control" placeholder="search by zip code" autofocus>
+             </div>
+               <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+           </form>
+           <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
