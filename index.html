@@ -28,11 +28,17 @@
           <div class="panel-body">
            <h1 class="heading">To Market</h1>
            <br>
-           <form class="form-inline" ng-submit="searchZip()">
+           <form class="form-inline" name="zipForm" ng-submit="searchZip()">
              <div class="form-group">
-               <input type="text" ng-model="zip" class="form-control" placeholder="search by zip code" autofocus>
+               <input type="text" ng-model="zip" name="zip" ng-minlength="5" ng-maxlength="5" class="form-control" placeholder="search by zip code" autofocus>
              </div>
                <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+               <div role="alert">
+                 <span class="error" ng-show="zipForm.zip.$error.minlength">
+                   <em>Too short! Enter 5 digits for a zip code.</em></span>
+                 <span class="error" ng-show="zipForm.zip.$error.maxlength">
+                   <em>Too long! Enter 5 digits for a zip code.</em></span>
+               </div>
            </form>
            <br>
           </div>
@@ -43,8 +49,10 @@
       <div class="col-sm-6 col-sm-offset-3" ng-repeat="market in pageResults">
         <div class="panel panel-default">
           <div class="panel-body">
-            <p>{{pageResults.marketname}}</p>
-            <p>{{pageResults.address}}</p>
+            <p><strong>{{market.marketname}}</strong></p>
+            <p>{{market.address}}</p>
+            <p>{{market.schedule}}</p>
+            <p>{{market.products}}</p>
 
           </div>
         </div>
